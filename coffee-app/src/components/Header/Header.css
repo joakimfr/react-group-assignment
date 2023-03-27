@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  padding: 1rem 1rem 0rem 1rem;
+ 
+}
+
+.header__nav {
+  height: 48px;
+  width: 48px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.header__cart {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #2F2926;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
