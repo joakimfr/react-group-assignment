@@ -18,13 +18,14 @@
 
 .menu__header{
     font-size: 2rem;
+    margin-bottom: auto;
     
 }
 
 .menu__section{
    display: flex;
    justify-content: space-between;
-  width: 300px;
+   width: 300px;
 }
 
 .menu__image{
