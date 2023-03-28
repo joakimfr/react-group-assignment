@@ -1,5 +1,7 @@
 import './App.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { useDispatch } from 'react-redux';
+import { addProduct } from './actions/productsAction';
 import Home from './views/Home';
 import About from './views/About';
 import OrderStatus from './views/Orderstatus';
@@ -7,6 +9,13 @@ import Menu from './views/Menu';
 
 function App() {
  
+  const dispatch = useDispatch();
+
+  function handleUpdateStore() {
+ 
+    dispatch(addProduct(product));
+  }
+
   const router = createBrowserRouter([
     {
       path: '/',
@@ -31,6 +40,8 @@ function App() {
 
 
   ]);
+
+  
 
   return (
     <div className="App">
