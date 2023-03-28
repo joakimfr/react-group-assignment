@@ -1,6 +1,7 @@
 import './Menu.css'
 import footerimage from '../assets/graphics-footer.svg'
 import plusimage from '../assets/plus-sign.png'
+import Header from '../components/Header/Header'
 import { useEffect, useState } from 'react'
 
 
@@ -45,15 +46,19 @@ function handleClick() {
 
 
   return (
-    <section className="menu">
-      <h1 className="menu__header">Meny</h1>
 
-       
-      {coffeeComponent} 
-          
-         
-      </section>
+   
+    
+          <section className="menu">
+            <Header/>
+            <h1 className="menu__header">Meny</h1>
 
+            
+            {coffeeComponent} 
+                
+            <img className='menu__image' src={footerimage} alt="" />
+          </section>
+ 
     
   )
 
