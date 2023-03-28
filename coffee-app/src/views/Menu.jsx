@@ -2,16 +2,27 @@ import './Menu.css'
 import footerimage from '../assets/graphics-footer.svg'
 import plusimage from '../assets/plus-sign.png'
 import { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux';
+import { addProduct } from '../actions/productsAction';
 
 
 function Menu() {
 
   const [coffees, setCoffees] = useState([]);
-  console.log(coffees)
+  const dispatch = useDispatch();
+
+  function handleClick(coffee) {
+    dispatch(addProduct({
+      id: coffee.id,
+      title: coffee.title,
+      price: coffee.price
+    }));
+  
+  }
 
 const coffeeComponent = coffees.map((coffee) => {
  return <div className='menu__section' key={coffee.id} >
-          <div className='menu__circle' onClick={handleClick}>
+          <div className='menu__circle' onClick={() => handleClick(coffee)}>
             <img src={plusimage} alt="" />
           </div>
           <article>
@@ -38,9 +49,7 @@ useEffect(() => {
 
 }, []);
 
-function handleClick() {
-  console.log('klick')
-}
+
 
 
 
