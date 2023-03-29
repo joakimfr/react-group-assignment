@@ -1,5 +1,6 @@
 const initialState = { // Här bestämmer vi allt som vi vill spara i vår Redux store i formen av ett objekt
-  products: []
+  products: [],
+  orderNumber: null,
 }
 
 const reducer = (state = initialState, action) => {
@@ -11,8 +12,13 @@ const reducer = (state = initialState, action) => {
           }
       case 'RESET_PRODUCTS': 
           return {
-            ...state,
-            products: []
+              ...state,
+              products: []
+          }
+      case 'SAVE_ORDER_NUMBER':
+      return {
+        ...state,
+        orderNumber: action.payload
       }
       default:
           return state
