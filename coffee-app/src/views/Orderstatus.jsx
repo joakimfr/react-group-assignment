@@ -3,9 +3,10 @@ import droneImage from '../assets/drone.svg'
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 
-function OrderStatus() {
+function OrderStatus({ orderNr }) {
 
-  const { orderNr } = useParams();
+  //const { orderNr } = useParams();
+  
   const [orderData, setOrderData] = useState({ orderNr: null, eta: null, status: null });
 
   useEffect(() => {
@@ -20,7 +21,7 @@ function OrderStatus() {
 
   return (
     <div className='order'>
-      <p className='order__nummer'>Ordernummer {orderData.orderNr}</p>
+      <p className='order__nummer'>Ordernummer {orderNr}</p>
       <img className='order__image' src={droneImage} alt="" />
       {orderData.status ? (
         <>
