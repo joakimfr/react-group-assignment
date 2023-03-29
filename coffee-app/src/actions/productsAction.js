@@ -11,4 +11,11 @@ function resetProducts() {
   }
 }
 
-export { addProduct, resetProducts }
+function saveOrderNumber(orderNumber) {
+  return {
+    type: 'SAVE_ORDER_NUMBER',
+    payload: orderNumber
+  }
+}
+
+export { addProduct, resetProducts, saveOrderNumber }

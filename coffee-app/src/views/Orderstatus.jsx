@@ -1,23 +1,27 @@
-import './OrderStatus.css'
-import droneImage from '../assets/drone.svg'
+import './OrderStatus.css';
+import droneImage from '../assets/drone.svg';
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom'
+import { useSelector } from 'react-redux';
 
-function OrderStatus({ orderNr }) {
-
-  //const { orderNr } = useParams();
+function OrderStatus() {
   
   const [orderData, setOrderData] = useState({ orderNr: null, eta: null, status: null });
 
-  useEffect(() => {
+  const orderNr = useSelector((state) => state.orderNumber);
+  console.log(orderNr)
+
+   /* useEffect(() => {
+
+    if (orderNr) {
     async function fetchData() {
       const response = await fetch(`https://airbean.awesomo.dev/api/beans/order/status/${orderNr}`);
       const data = await response.json();
-      console.log(data)
+      console.log(data);
       setOrderData(data);
     }
     fetchData();
-  }, [orderNr]);
+  }
+  }, [orderNr]);  */
 
   return (
     <div className='order'>
@@ -33,7 +37,7 @@ function OrderStatus({ orderNr }) {
         <h2 className='order__title'>No active order exists</h2>
       )}
     </div>
-  )
+  );
 }
 
 export default OrderStatus;

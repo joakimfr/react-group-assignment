@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useSelector } from "react-redux";
 import cartIcon from './bag.svg'
 import { useDispatch } from 'react-redux';
-import { resetProducts } from '../../actions/productsAction';
+import { resetProducts, saveOrderNumber } from '../../actions/productsAction';
 import { useNavigate } from 'react-router-dom';
 
 function Cart(){
@@ -33,7 +33,11 @@ function Cart(){
         body: JSON.stringify(requestBody),
       });
       const data = await response.json();
+
       console.log(data);
+
+      dispatch(saveOrderNumber(data.orderNr)); 
+
       alert(`ordernummer: ${data.orderNr}. ETA: ${data.eta}.`);
       dispatch(resetProducts());
 
