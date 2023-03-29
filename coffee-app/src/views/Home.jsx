@@ -9,7 +9,7 @@ function Home () {
 
   return(
     <div>
-      <Header />
+      
     <section className='home'>
      
      

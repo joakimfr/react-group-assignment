@@ -1,5 +1,6 @@
 const initialState = { // Här bestämmer vi allt som vi vill spara i vår Redux store i formen av ett objekt
-  products: []
+  products: [],
+  orderNumber: null,
 }
 
 const reducer = (state = initialState, action) => {
@@ -9,8 +10,15 @@ const reducer = (state = initialState, action) => {
               ...state, // Kopiera ditt state
               products: [...state.products, action.payload] // Välj vilken del i din store du vill uppdatera, i detta fall counter
           }
-      case 'RESET_PRODUCTS': {
-
+      case 'RESET_PRODUCTS': 
+          return {
+              ...state,
+              products: []
+          }
+      case 'SAVE_ORDER_NUMBER':
+      return {
+        ...state,
+        orderNumber: action.payload
       }
       
       default:

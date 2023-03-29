@@ -35,7 +35,7 @@ const coffeeComponent = coffees.map((coffee) => {
  
 })
 
-console.log(coffeeComponent)
+//console.log(coffeeComponent)
 
 useEffect(() => {
   async function getCoffee() {
