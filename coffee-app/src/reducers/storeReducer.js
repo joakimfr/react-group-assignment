@@ -9,7 +9,9 @@ const reducer = (state = initialState, action) => {
               ...state, // Kopiera ditt state
               products: [...state.products, action.payload] // Välj vilken del i din store du vill uppdatera, i detta fall counter
           }
-   
+      case 'RESET_PRODUCTS': {
+
+      }
       default:
           return state
   }

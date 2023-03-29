@@ -12,7 +12,7 @@ function App() {
   const dispatch = useDispatch();
 
   function handleUpdateStore() {
- 
+  
     dispatch(addProduct(product));
   }
 
