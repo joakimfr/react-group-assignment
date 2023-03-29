@@ -12,6 +12,7 @@ const reducer = (state = initialState, action) => {
       case 'RESET_PRODUCTS': {
 
       }
+      
       default:
           return state
   }

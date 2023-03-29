@@ -3,11 +3,16 @@ import { useState } from 'react';
 import { useSelector } from "react-redux";
 import cartIcon from './bag.svg'
 
+
 function Cart(){
     const [showCart, setShowCart] = useState(false);
+    
+
 
     const cartItems = useSelector((state) => state.products);  //hämtar ett state med hjälp av useSelector som innehåller ett object som är sparat i products
     console.log(cartItems)
+
+
 
 
     return(
@@ -24,7 +29,7 @@ function Cart(){
               <p>{product.title} - {product.price} Kr</p>
             </div>
           ))}
-      <button className='cart__button'>Take my money</button>
+      <button className='cart__button'>Take my money!</button>
     </section>
    )}
   </article>

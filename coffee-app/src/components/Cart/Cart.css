@@ -2,6 +2,7 @@
     display: flex;
     justify-content: flex-end;
     position: relative;
+    
    
 }
 
@@ -13,25 +14,27 @@
     background-color: #2F2926;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
-  
-  
-    
+    align-items: center; 
 }
 
 .cart__items{
     background-color: azure;
-    min-width: 400px;
+    width: 95vw;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
     justify-content: center;
     align-items: center;
     position: absolute;
-    margin-top: 2rem;
+    margin-top: 4rem;
+    padding: 2rem;
+    right: -5px;
     
-   
+}
+
+.cart__items p{
+    margin:1rem 0 0rem 0 ;
 }
 
 .cart__button{
@@ -40,6 +43,11 @@
     border-radius: 25px;
     background-color: #2F2926;
     color: aliceblue;
+    font-size: 1rem;
+    padding: 15px;
+    margin: 7rem 0 0 0 ;
+    font-weight: bold;
+    
 }
 
 .cart__number {
@@ -54,4 +62,9 @@
   top: -4px;
   right: 0px;
   color: #FFFFFF;
+}
+
+h3{
+    font-size: 2rem;
+    margin-bottom: 4rem;
 }
