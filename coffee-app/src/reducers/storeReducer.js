@@ -20,6 +20,7 @@ const reducer = (state = initialState, action) => {
         ...state,
         orderNumber: action.payload
       }
+      
       default:
           return state
   }

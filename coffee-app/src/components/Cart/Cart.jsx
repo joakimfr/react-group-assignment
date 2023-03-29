@@ -6,9 +6,11 @@ import { useDispatch } from 'react-redux';
 import { resetProducts, saveOrderNumber } from '../../actions/productsAction';
 import { useNavigate } from 'react-router-dom';
 
+
 function Cart(){
     const dispatch = useDispatch();
     const [showCart, setShowCart] = useState(false);
+
     const cartItems = useSelector((state) => state.products);  //hämtar ett state med hjälp av useSelector som innehåller ett object som är sparat i products
     //console.log(cartItems)
 
@@ -44,6 +46,8 @@ function Cart(){
      // navigate(`/orderstatus/${data.orderNr}`);
     }
 
+
+
     return(
         <article className='cart'>
             <a href="#" className='cart__link' onClick={()=>{ setShowCart(!showCart) }}>
@@ -58,7 +62,9 @@ function Cart(){
               <p>{product.title} - {product.price} Kr</p>
             </div>
           ))}
+
       <button className='cart__button' onClick={() => handleClick(cartItems)}>Take my money</button>
+
     </section>
    )}
   </article>

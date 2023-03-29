@@ -6,6 +6,8 @@ import Home from './views/Home';
 import About from './views/About';
 import OrderStatus from './views/Orderstatus';
 import Menu from './views/Menu';
+import Nav from './views/Nav';
+
 
 function App() {
  
@@ -45,8 +47,13 @@ function App() {
       element: <Menu />
     },
 
+    {
+      path: '/nav',
+      element: <Nav />
+    },
 
 
+   
   ]);
 
   
