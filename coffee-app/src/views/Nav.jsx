@@ -16,11 +16,11 @@ function Nav()  {
                 </div>
                 <aside className='nav__links'>
                     
-                    <Link to="/menu"> <a href="">Meny</a></Link>
+                    <Link to="/menu"> Menu</Link>
                 
                     <a href="">Vårt kaffe</a>
                          
-                    <a href="">Orderstatus</a>
+                    <Link to="/orderstatus">Orderstatus</Link>
                     
                 </aside>
         </section>

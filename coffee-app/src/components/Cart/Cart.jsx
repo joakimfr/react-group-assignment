@@ -5,6 +5,7 @@ import cartIcon from './bag.svg'
 import { useDispatch } from 'react-redux';
 import { resetProducts, saveOrderNumber } from '../../actions/productsAction';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 
 function Cart(){
@@ -14,7 +15,7 @@ function Cart(){
     const cartItems = useSelector((state) => state.products);  //hämtar ett state med hjälp av useSelector som innehåller ett object som är sparat i products
     //console.log(cartItems)
 
-    //const navigate = useNavigate();
+    const navigate = useNavigate();
 
     async function handleClick(cartItems) {
       const orderItems = cartItems.map((item) => {
@@ -43,7 +44,7 @@ function Cart(){
       alert(`ordernummer: ${data.orderNr}. ETA: ${data.eta}.`);
       dispatch(resetProducts());
 
-     // navigate(`/orderstatus/${data.orderNr}`);
+      navigate(`/orderstatus`);
     }
 
 
@@ -64,7 +65,7 @@ function Cart(){
           ))}
 
       <button className='cart__button' onClick={() => handleClick(cartItems)}>Take my money</button>
-
+    
     </section>
    )}
   </article>
