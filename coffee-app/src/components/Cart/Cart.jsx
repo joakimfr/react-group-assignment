@@ -49,8 +49,9 @@ function Cart(){
 
         dispatch(saveOrderNumber(data.orderNr)); 
 
-        alert(`ordernummer: ${data.orderNr}. ETA: ${data.eta}.`);
-        dispatch(resetProducts());
+ joakim-orderstatus
+      dispatch(resetProducts());
+
 
         navigate(`/orderstatus`);
     }

@@ -6,11 +6,11 @@ import { useSelector } from 'react-redux';
 function OrderStatus() {
   
   const [orderData, setOrderData] = useState({ orderNr: null, eta: null, status: null });
-
+console.log(orderData.eta)
   const orderNr = useSelector((state) => state.orderNumber);
   console.log(orderNr)
 
-   /* useEffect(() => {
+   useEffect(() => {
 
     if (orderNr) {
     async function fetchData() {
@@ -20,24 +20,30 @@ function OrderStatus() {
       setOrderData(data);
     }
     fetchData();
+  } else {
+    console.log('hej')
   }
-  }, [orderNr]);  */
+  }, [orderNr]);  
 
   return (
     <div className='order'>
-      <p className='order__nummer'>Ordernummer {orderNr}</p>
-      <img className='order__image' src={droneImage} alt="" />
-      {orderData.status ? (
-        <>
+      { orderNr?  
+        <article className='order__exists'> 
+          <p className='order__nummer'>Ordernummer {orderNr}</p>
+          <img className='order__image' src={droneImage} alt="" />
           <h2 className='order__title'>Din beställning är påväg!</h2>
           <p className='order__time'>{orderData.eta} minuter</p>
           <button className='order__button'>Ok, cool!</button>
-        </>
-      ) : (
-        <h2 className='order__title'>No active order exists</h2>
-      )}
+        </article>
+      : <article className='order__noexists'>
+          <img className='order__image' src={droneImage} alt="" />
+          <h2 className='order__title'>No active order exists</h2>
+         </article> 
+        }
     </div>
   );
 }
 
 export default OrderStatus;
+
+
