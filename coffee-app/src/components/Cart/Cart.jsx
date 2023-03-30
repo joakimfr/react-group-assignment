@@ -49,7 +49,7 @@ function Cart(){
 
         dispatch(saveOrderNumber(data.orderNr)); 
 
- joakim-orderstatus
+
       dispatch(resetProducts());
 
 
