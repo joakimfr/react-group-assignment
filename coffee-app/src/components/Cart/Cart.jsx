@@ -48,11 +48,7 @@ function Cart(){
         console.log(data);
 
         dispatch(saveOrderNumber(data.orderNr)); 
-
-
-      dispatch(resetProducts());
-
-
+        dispatch(resetProducts());
         navigate(`/orderstatus`);
     }
 

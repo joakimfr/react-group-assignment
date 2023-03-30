@@ -8,7 +8,7 @@
 .menu{
     background-color: #F3E4E1;
     width: 100vw;
-    height: 100vh;
+   
     display: flex;
     justify-content: center;
     flex-direction: column;
