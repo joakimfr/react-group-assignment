@@ -17,37 +17,45 @@ function Cart(){
 
     const navigate = useNavigate();
 
+    function calculateTotalPrice(cartItems) {
+        let totalPrice = 0;
+        for (let i = 0; i < cartItems.length; i++) {
+          totalPrice += cartItems[i].price;
+        }
+        return totalPrice;
+    }
+    
     async function handleClick(cartItems) {
-      const orderItems = cartItems.map((item) => {
-        return { name: item.title, price: item.price };
-      });
-    
-      const requestBody = {
-        details: {
-          order: orderItems,
-        },
-      };
-    
-      const response = await fetch("https://airbean.awesomo.dev/api/beans/order/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(requestBody),
-      });
-      const data = await response.json();
+        const orderItems = cartItems.map((item) => {
+            return { name: item.title, price: item.price, };
+        });
+      
+        const requestBody = {
+            details: {
+              order: orderItems,
+            },
+        };
+      
+        const response = await fetch("https://airbean.awesomo.dev/api/beans/order/", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(requestBody),
+        });
+        const data = await response.json();
 
-      console.log(data);
+        console.log(data);
 
-      dispatch(saveOrderNumber(data.orderNr)); 
+        dispatch(saveOrderNumber(data.orderNr)); 
 
-      alert(`ordernummer: ${data.orderNr}. ETA: ${data.eta}.`);
-      dispatch(resetProducts());
+        alert(`ordernummer: ${data.orderNr}. ETA: ${data.eta}.`);
+        dispatch(resetProducts());
 
-      navigate(`/orderstatus`);
+        navigate(`/orderstatus`);
     }
 
-
+    const totalPrice = calculateTotalPrice(cartItems);
 
     return(
         <article className='cart'>
@@ -58,17 +66,16 @@ function Cart(){
             {showCart && (
             <section className='cart__items'>
                 <h3>Din beställning</h3>
-            {cartItems.map(product => (
-            <div key={product.id}>
-              <p>{product.title} - {product.price} Kr</p>
-            </div>
-          ))}
-
-      <button className='cart__button' onClick={() => handleClick(cartItems)}>Take my money</button>
-    
-    </section>
-   )}
-  </article>
+                {cartItems.map(product => (
+                    <div key={product.id}>
+                      <p>{product.title} - {product.price} Kr</p>
+                    </div>
+                ))}
+                <p>Totalt pris: {totalPrice} Kr</p>
+                <button className='cart__button' onClick={() => handleClick(cartItems)}>Take my money</button>
+            </section>
+            )}
+        </article>
     );
 }
 
