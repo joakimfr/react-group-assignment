@@ -23,14 +23,23 @@ function Menu() {
 
 const coffeeComponent = coffees.map((coffee) => {
  return <div className='menu__section' key={coffee.id} >
+ 
           <div className='menu__circle' onClick={() => handleClick(coffee)}>
+          
             <img src={plusimage} alt="" />
           </div>
-          <article>
-            <h2>{coffee.title} </h2>
-            <p>{coffee.desc} </p>
+          <section className='menu__container'>
+
+          <article className='menu__top'>
+            <h2 className='menu__title'>{coffee.title} </h2>
+            <span className='menu__dots'></span>
+            <p className='menu__price'>{coffee.price} Kr </p>
           </article>
-          <p>{coffee.price} Kr </p>
+
+          <article className='menu__desc'>
+          <p>{coffee.desc} </p>
+          </article>
+          </section>
         </div>
  
 })
