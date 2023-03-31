@@ -17,6 +17,7 @@
     align-items: center;
     gap: 1rem;
     color: #2F2926;
+    
 
 }
 
@@ -32,7 +33,7 @@
 
 .menu__section{
    display: flex;
-  gap: 10px;
+ 
    width: 300px;
    
 }
@@ -75,6 +76,7 @@
   width: 100%;
   margin-right: 10px;
   height: 35px;
+  margin-left: 10px;
 }
 .menu__title {
   font-family: 'PT Serif';
@@ -83,8 +85,8 @@
   font-weight: 700;
   font-size: 23px;
   line-height: 120%;
-  margin: 0;
-  line-height: 1;
+  
+  
 }
 .menu__dots {
   
@@ -112,5 +114,6 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 130%;
+  margin-left: 10px;
   
 }
