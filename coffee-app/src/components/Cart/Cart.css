@@ -28,14 +28,41 @@
     align-items: center;
     position: absolute;
     margin-top: 4rem;
-    padding: 2rem;
+    
     right: -5px;
     
 }
 
-.cart__items p{
-    margin:1rem 0 0rem 0 ;
+.cart__container {
+  width: 300px;
 }
+
+.cart__title-container {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.cart__title {
+  margin: 0;
+  line-height: 1;
+}
+
+.cart__dots {
+  border-bottom: 2px dotted black;
+  opacity: 0.4;
+  flex-grow: 1;
+  height: 1.6em;
+  margin-left: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.cart__items p {
+    margin:1rem 0 0rem 0 ;
+  }
+
+
 
 .cart__button{
     padding: .6rem;

@@ -5,6 +5,13 @@ function addProduct(product) {
   }
 }
 
+function removeProduct() {
+  return {
+    type: 'REMOVE_PRODUCT',
+    payload: product
+  }
+}
+
 function resetProducts() {
   return {
     type: 'RESET_PRODUCTS',
