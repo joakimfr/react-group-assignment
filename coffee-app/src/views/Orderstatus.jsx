@@ -30,10 +30,10 @@ console.log(orderData.eta)
     <div className='order'>
       { orderNr?  
         <article className='order__exists'> 
-          <p className='order__nummer'>Ordernummer {orderNr}</p>
+          <p className='order__number'>Ordernummer #{orderNr}</p>
           <img className='order__image' src={droneImage} alt="" />
           <h2 className='order__title'>Din beställning är påväg!</h2>
-          <p className='order__time'>{orderData.eta} minuter</p>
+          <p className='order__time'><span className='order__time--bold'>{orderData.eta}</span> minuter</p>
           <Link to="/menu">
           <button className='order__button'>Ok, cool!</button>
           </Link>
