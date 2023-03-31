@@ -1,24 +1,24 @@
 import './Nav.css'
-import { Link, Route, Routes, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import navimage from '../assets/close.svg'
 
 
 function Nav()  {
      
-
-  
+    const navigate = useNavigate();
+    
 
     return(
         <section className='nav__section'>
 
-                <div className='nav__button'>
+                <div onClick={()=> navigate(-1)} className='nav__button'>
                     <img className='nav__image' src={navimage} alt="" />
                 </div>
                 <aside className='nav__links'>
                     
                     <Link to="/menu"> Menu</Link>
                 
-                    <a href="">Vårt kaffe</a>
+                    <Link to="/about"> About</Link>
                          
                     <Link to="/orderstatus">Orderstatus</Link>
                     
