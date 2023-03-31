@@ -1,7 +1,8 @@
 import './Header.css'
 import headerImage from './graphics-header.svg'
 import navIonc from './navicon.svg'
-import cartIcon from './bag.svg'
+import Cart from '../Cart/Cart'
+import { Link } from 'react-router-dom';
 
 function Header() {
   
@@ -9,12 +10,12 @@ function Header() {
 return (
  <header className="header" style={{ backgroundImage: `url(${headerImage})` }}>
   <article className='header__nav'>
+  <Link to="/nav">
     <img src={navIonc} alt="" />
+  </Link>
+
   </article>
-  <article className='header__cart'>
-    <img src={cartIcon} alt="" />
-  </article>
- 
+   <Cart/>
  </header>
 )
 

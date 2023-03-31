@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Work+Sans:wght@400;600;700&display=swap');
+
+.about{
+    background: #F3E4E1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+
+
+}
+
+.about__wrapper{
+    padding: 2rem;
+    max-width: 500px;
+   
+}
+
+.about__header{
+    font-family: PT serif;
+    font-size: 2rem;
+    margin: 2rem 0 2rem 0;
+}
+
+.about__text{
+    word-spacing: .2rem;
+    font-family: Work Sans;
+    line-height: 20.2px;
+    
+}
+
+.about__text p{
+    margin: 2rem 0 1rem 0;
+}
+
+.about__text__bold{
+    font-weight: 600;
+}
+
+.about__founder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+
+
+.about__founder__image {
+    border-radius: 50%;
+}
+
+.about__founder__name{
+    margin: 0;
+    font-family: PT serif;
+}
+

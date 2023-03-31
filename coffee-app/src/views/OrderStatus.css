@@ -1,0 +1,42 @@
+.order {
+  background-color: #E5674E;
+  height: 100vh;
+  width: 100wh;
+  
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+ 
+}
+
+.order__exists {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order__noexists {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+ 
+}
+
+.order__image {
+  height: 120px;
+}
+
+.order__button {
+
+ font-family: 'PT Serif';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 120%;
+padding: 0.8rem 2rem 0.8rem;
+border-radius: 30px;
+border: none;
+}
