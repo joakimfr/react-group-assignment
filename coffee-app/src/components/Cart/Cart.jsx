@@ -66,12 +66,12 @@ function Cart(){
                 <h3 className='cart__headline'>Din beställning</h3>
                 {cartItems.map(product => (
                     <div key={product.id}>
-                   <div className='cart__title-container'>
-          <p className='cart__title'>{product.title}</p>
-          <span className='cart__dots'></span>
+          <div className='cart__title-container'>
+            <p className='cart__title'>{product.title}</p>
+            <span className='cart__dots'></span>
         </div>  
-                      <p className='cart__price'>{product.price} Kr</p>
-                    </div>
+          <p className='cart__price'>{product.price} Kr</p>
+        </div>
                 ))}
                 <div className='cart__title-container'>
                 <p className='cart__total'>Totalt pris:</p>
