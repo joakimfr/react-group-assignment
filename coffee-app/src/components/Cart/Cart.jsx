@@ -75,11 +75,16 @@ function Cart(){
         </div>
                 ))}
                 <div className='cart__total-container'>
-                <p className='cart__total'>Total</p>
-                <span className='cart__dots'></span>
-                <p className='cart__kr'>{totalPrice} Kr</p>
-                </div>
-                <button className='cart__button' onClick={() => handleClick(cartItems)}>Take my money</button>
+                  <div className='cart__total'>
+                    <p className='cart__total'>Total</p>
+                    <span className='cart__dots'></span>
+                    <p className='cart__kr'>{totalPrice} Kr</p>
+                  </div>
+                    <p className='cart__drone'>inkl moms + drönarleverans</p>
+                    <button className='cart__button' onClick={() => handleClick(cartItems)}>Take my money</button>
+                  </div>
+                
+                
                 
                 </article>
             </section>
