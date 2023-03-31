@@ -1,9 +1,4 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    
-}
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Work+Sans:wght@400;600;700&display=swap');
 
 .about{
     background: #F3E4E1;
@@ -11,6 +6,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+
 
 }
 
@@ -21,12 +18,20 @@
 }
 
 .about__header{
+    font-family: PT serif;
     font-size: 2rem;
     margin: 2rem 0 2rem 0;
 }
 
 .about__text{
-    word-spacing: .3rem;
+    word-spacing: .2rem;
+    font-family: Work Sans;
+    line-height: 20.2px;
+    
+}
+
+.about__text p{
+    margin: 2rem 0 1rem 0;
 }
 
 .about__text__bold{
@@ -49,8 +54,6 @@
 
 .about__founder__name{
     margin: 0;
+    font-family: PT serif;
 }
 
-p{
-    margin: 1rem 0 0 0 ;
-}
