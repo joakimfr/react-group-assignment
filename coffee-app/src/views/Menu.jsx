@@ -69,6 +69,7 @@ useEffect(() => {
     
           <section className="menu">
             <Header/>
+           
             <h1 className="menu__header">Meny</h1>
 
             
