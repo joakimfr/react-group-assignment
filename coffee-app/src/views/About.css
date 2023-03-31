@@ -1,11 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
 .about{
     background: #F3E4E1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .about__wrapper{
     padding: 2rem;
+    max-width: 500px;
+   
 }
 
 .about__header{
     font-size: 2rem;
+    margin: 2rem 0 2rem 0;
+}
+
+.about__text{
+    word-spacing: .3rem;
+}
+
+.about__text__bold{
+    font-weight: 600;
+}
+
+.about__founder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+
+
+.about__founder__image {
+    border-radius: 50%;
+}
+
+.about__founder__name{
+    margin: 0;
+}
+
+p{
+    margin: 1rem 0 0 0 ;
 }
