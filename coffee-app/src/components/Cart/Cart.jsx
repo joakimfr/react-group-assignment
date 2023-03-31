@@ -62,16 +62,28 @@ function Cart(){
             </a>
             {showCart && (
             <section className='cart__items'>
-                <h3>Din beställning</h3>
+              <article className='cart__container'>
+                <h3 className='cart__headline'>Din beställning</h3>
                 {cartItems.map(product => (
                     <div key={product.id}>
-                      <p>{product.title} - {product.price} Kr</p>
+                   <div className='cart__title-container'>
+          <p className='cart__title'>{product.title}</p>
+          <span className='cart__dots'></span>
+        </div>  
+                      <p className='cart__price'>{product.price} Kr</p>
                     </div>
                 ))}
-                <p>Totalt pris: {totalPrice} Kr</p>
+                <div className='cart__title-container'>
+                <p className='cart__total'>Totalt pris:</p>
+                <span className='cart__dots'></span>
+                <p className='cart__kr'>{totalPrice} Kr</p>
+                </div>
                 <button className='cart__button' onClick={() => handleClick(cartItems)}>Take my money</button>
+                
+                </article>
             </section>
             )}
+           
         </article>
     );
 }
