@@ -122,7 +122,22 @@
   vertical-align: middle;
 }
 
+.cart__remove {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #2F2926;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+}
+
+.cart__minus {
+  height: 1px;
+  width: .8rem;
+  background-color: white;
+}
 
 
 

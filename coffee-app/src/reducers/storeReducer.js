@@ -17,9 +17,16 @@ const reducer = (state = initialState, action) => {
           }
       case 'SAVE_ORDER_NUMBER':
       return {
+              ...state,
+              orderNumber: action.payload
+          }
+      case 'REMOVE_PRODUCT':
+        const newProducts = state.products.filter(product => product.id !== action.payload)
+      return {
         ...state,
-        orderNumber: action.payload
+        products: newProducts
       }
+
       
       default:
           return state
