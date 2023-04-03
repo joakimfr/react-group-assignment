@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom'
 function OrderStatus() {
   
   const [orderData, setOrderData] = useState({ orderNr: null, eta: null, status: null });
-console.log(orderData.eta)
+
   const orderNr = useSelector((state) => state.orderNumber);
-  console.log(orderNr)
+  
 
    useEffect(() => {
 
@@ -22,7 +22,7 @@ console.log(orderData.eta)
     }
     fetchData();
   } else {
-    console.log('hej')
+    console.log('inget orderNR')
   }
   }, [orderNr]);  
 
@@ -35,14 +35,14 @@ console.log(orderData.eta)
           <h2 className='order__title'>Din beställning är påväg!</h2>
           <p className='order__time'><span className='order__time--bold'>{orderData.eta}</span> minuter</p>
           <Link to="/menu">
-          <button className='order__button'>Ok, cool!</button>
+            <button className='order__button'>Ok, cool!</button>
           </Link>
         </article>
       : <article className='order__noexists'>
           <img className='order__image' src={droneImage} alt="" />
           <h2 className='order__title'>No active order exists</h2>
           <Link to="/menu">
-          <button className='order__button'>Back to menu!</button>
+            <button className='order__button'>Back to menu!</button>
           </Link>
          </article> 
         }

@@ -15,10 +15,9 @@ function Nav()  {
                     <img className='nav__image' src={navimage} alt="" />
                 </div>
                 <aside className='nav__links'>
-                    
-                    <Link to="/menu" className='nav__text'> Menu</Link>
+                    <Link to="/menu" className='nav__text'> Meny</Link>
                     <div className='nav__line'></div>
-                    <Link to="/about" className='nav__text'> About</Link>
+                    <Link to="/about" className='nav__text'>Vårt kaffe</Link>
                     <div className='nav__line'></div>
                     <Link to="/orderstatus" className='nav__text'>Orderstatus</Link>
                     <div className='nav__line'></div>
