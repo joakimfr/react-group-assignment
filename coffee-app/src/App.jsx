@@ -1,7 +1,7 @@
 import './App.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
-import { addProduct, resetProducts, saveOrderNumber } from './actions/productsAction';
+import { addProduct, resetProducts, saveOrderNumber, removeProduct } from './actions/productsAction';
 import Home from './views/Home';
 import About from './views/About';
 import OrderStatus from './views/Orderstatus';
@@ -24,6 +24,11 @@ function App() {
 
   function handleOrderNumber() {
     dispatch(saveOrderNumber(orderNumber));
+  }
+
+  function handleRemoveProduct() {
+    dispatch(removeProduct(productId))
+    
   }
 
   const router = createBrowserRouter([

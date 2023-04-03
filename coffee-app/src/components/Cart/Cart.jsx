@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useSelector } from "react-redux";
 import cartIcon from './bag.svg'
 import { useDispatch } from 'react-redux';
-import { resetProducts, saveOrderNumber } from '../../actions/productsAction';
+import { removeProduct, resetProducts, saveOrderNumber } from '../../actions/productsAction';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 
@@ -54,6 +54,10 @@ function Cart(){
 
     const totalPrice = calculateTotalPrice(cartItems);
 
+    function handleClickRemove(productId) {
+      dispatch(removeProduct(productId));
+    }
+
     return(
         <article className='cart'>
             <a href="#" className='cart__link' onClick={()=>{ setShowCart(!showCart) }}>
@@ -70,6 +74,9 @@ function Cart(){
           <div className='cart__title-container'>
             <p className='cart__title'>{product.title}</p>
             <span className='cart__dots'></span>
+            <div className='cart__remove'>
+              <div className='cart__minus' onClick={() => handleClickRemove(product.id)}></div>
+            </div>
         </div>  
           <p className='cart__price'>{product.price} Kr</p>
         </div>

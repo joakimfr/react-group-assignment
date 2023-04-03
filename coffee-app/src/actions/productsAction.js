@@ -5,10 +5,10 @@ function addProduct(product) {
   }
 }
 
-function removeProduct() {
+function removeProduct(productId) {
   return {
     type: 'REMOVE_PRODUCT',
-    payload: product
+    payload: productId
   }
 }
 
@@ -25,4 +25,4 @@ function saveOrderNumber(orderNumber) {
   }
 }
 
-export { addProduct, resetProducts, saveOrderNumber }
+export { addProduct, resetProducts, saveOrderNumber, removeProduct }
